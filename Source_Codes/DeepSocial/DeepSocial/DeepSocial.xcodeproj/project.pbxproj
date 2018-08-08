@@ -13,7 +13,6 @@
 		134808EB2085E2D8009C38A4 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 134808E92085E2D8009C38A4 /* LoadingView.xib */; };
 		138D723D20805A6300EED579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138D723C20805A6300EED579 /* AppDelegate.swift */; };
 		138D724520805A6300EED579 /* DeepSocial.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 138D724320805A6300EED579 /* DeepSocial.xcdatamodeld */; };
-		138D724720805A6300EED579 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 138D724620805A6300EED579 /* Assets.xcassets */; };
 		138D724A20805A6300EED579 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 138D724820805A6300EED579 /* LaunchScreen.storyboard */; };
 		96049AF920B903B3002923AA /* FeatureItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96049AF820B903B2002923AA /* FeatureItem.swift */; };
 		96049AFE20B94D19002923AA /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96049AFD20B94D19002923AA /* InputViewController.swift */; };
@@ -65,6 +64,8 @@
 		9673F45C20BCFF5900DB973D /* youve-been-a-very-good.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9673F45B20BCFF5900DB973D /* youve-been-a-very-good.wav */; };
 		9677C6EE210626B500C147B9 /* TrendingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9677C6ED210626B500C147B9 /* TrendingVC.swift */; };
 		9677EC2B210DD4A100DA2072 /* SearchTimelineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9677EC2A210DD4A100DA2072 /* SearchTimelineVC.swift */; };
+		967C2D072116B96E009E48EC /* LocTrendingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C2D062116B96E009E48EC /* LocTrendingVC.swift */; };
+		9680E95D211B2ECE00D20B62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9680E95C211B2ECE00D20B62 /* Assets.xcassets */; };
 		9685FE5220980DB200E3384A /* SentenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685FE5020980DB200E3384A /* SentenceCell.swift */; };
 		9685FE5320980DB200E3384A /* SentenceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9685FE5120980DB200E3384A /* SentenceCell.xib */; };
 		9685FE55209812B700E3384A /* NLSentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9685FE54209812B700E3384A /* NLSentence.swift */; };
@@ -86,6 +87,7 @@
 		96AF4C6520BBFE8500E8F49A /* CVTextAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AF4C6420BBFE8500E8F49A /* CVTextAnnotation.swift */; };
 		96B07F082084C185002E2339 /* NLCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B07F072084C185002E2339 /* NLCategory.swift */; };
 		96B5D96C20DAA9FF00B59688 /* bus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96B5D96B20DAA9FF00B59688 /* bus.jpg */; };
+		96C8FBF6211852F00003B957 /* AvailableLocationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C8FBF5211852F00003B957 /* AvailableLocationsVC.swift */; };
 		96D938042094E08A00E5F9A8 /* deepsocial-key.json in Resources */ = {isa = PBXBuildFile; fileRef = 96D938032094E08A00E5F9A8 /* deepsocial-key.json */; };
 		96FF01BA208A47E1001867E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FF01B8208A47E1001867E2 /* Main.storyboard */; };
 		96FF01BC208A4808001867E2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FF01BB208A4808001867E2 /* Login.storyboard */; };
@@ -116,7 +118,6 @@
 		138D723920805A6300EED579 /* DeepSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		138D723C20805A6300EED579 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		138D724420805A6300EED579 /* DeepSocial.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DeepSocial.xcdatamodel; sourceTree = "<group>"; };
-		138D724620805A6300EED579 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		138D724920805A6300EED579 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		138D724B20805A6300EED579 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3561D2BFAF65A16405748E06 /* Pods_DeepSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeepSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +177,8 @@
 		9673F45B20BCFF5900DB973D /* youve-been-a-very-good.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "youve-been-a-very-good.wav"; sourceTree = "<group>"; };
 		9677C6ED210626B500C147B9 /* TrendingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingVC.swift; sourceTree = "<group>"; };
 		9677EC2A210DD4A100DA2072 /* SearchTimelineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTimelineVC.swift; sourceTree = "<group>"; };
+		967C2D062116B96E009E48EC /* LocTrendingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocTrendingVC.swift; sourceTree = "<group>"; };
+		9680E95C211B2ECE00D20B62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9685FE5020980DB200E3384A /* SentenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceCell.swift; sourceTree = "<group>"; };
 		9685FE5120980DB200E3384A /* SentenceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SentenceCell.xib; sourceTree = "<group>"; };
 		9685FE54209812B700E3384A /* NLSentence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLSentence.swift; sourceTree = "<group>"; };
@@ -196,6 +199,7 @@
 		96AF4C6420BBFE8500E8F49A /* CVTextAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVTextAnnotation.swift; sourceTree = "<group>"; };
 		96B07F072084C185002E2339 /* NLCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLCategory.swift; sourceTree = "<group>"; };
 		96B5D96B20DAA9FF00B59688 /* bus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bus.jpg; sourceTree = "<group>"; };
+		96C8FBF5211852F00003B957 /* AvailableLocationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableLocationsVC.swift; sourceTree = "<group>"; };
 		96D938032094E08A00E5F9A8 /* deepsocial-key.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "deepsocial-key.json"; sourceTree = "<group>"; };
 		96FF01B9208A47E1001867E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DeepSocial/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		96FF01BB208A4808001867E2 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -266,8 +270,8 @@
 				963755E02083B9A90014CFBC /* Views */,
 				96A3AA5020819E4C009BCB1D /* Models */,
 				138D723C20805A6300EED579 /* AppDelegate.swift */,
-				138D724620805A6300EED579 /* Assets.xcassets */,
 				138D724820805A6300EED579 /* LaunchScreen.storyboard */,
+				9680E95C211B2ECE00D20B62 /* Assets.xcassets */,
 				138D724B20805A6300EED579 /* Info.plist */,
 				138D724320805A6300EED579 /* DeepSocial.xcdatamodeld */,
 				961765C42081174B00254BEF /* NLCloud.swift */,
@@ -413,6 +417,7 @@
 			children = (
 				9677C6ED210626B500C147B9 /* TrendingVC.swift */,
 				9677EC2A210DD4A100DA2072 /* SearchTimelineVC.swift */,
+				967C2D062116B96E009E48EC /* LocTrendingVC.swift */,
 			);
 			path = Trend;
 			sourceTree = "<group>";
@@ -456,6 +461,14 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		96C8FBF421182FED0003B957 /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				96C8FBF5211852F00003B957 /* AvailableLocationsVC.swift */,
+			);
+			path = Locations;
+			sourceTree = "<group>";
+		};
 		96D938022094E08100E5F9A8 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,6 +495,7 @@
 		96FF01BD208A4843001867E2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				96C8FBF421182FED0003B957 /* Locations */,
 				9677C6EC2106269A00C147B9 /* Trend */,
 				963ABE1B20F37125005FBA2B /* Tab */,
 				963ABE1A20F3710E005FBA2B /* Products */,
@@ -614,8 +628,8 @@
 				9663E66020BC770900D84729 /* CVWebCell.xib in Resources */,
 				9685FE5320980DB200E3384A /* SentenceCell.xib in Resources */,
 				138D724A20805A6300EED579 /* LaunchScreen.storyboard in Resources */,
+				9680E95D211B2ECE00D20B62 /* Assets.xcassets in Resources */,
 				963F9DA1208DB56100A27A5C /* UserInputCell.xib in Resources */,
-				138D724720805A6300EED579 /* Assets.xcassets in Resources */,
 				134808EB2085E2D8009C38A4 /* LoadingView.xib in Resources */,
 				96247EA920CCE18F00D18E4B /* EntitySentimentCell.xib in Resources */,
 				9673F45C20BCFF5900DB973D /* youve-been-a-very-good.wav in Resources */,
@@ -813,6 +827,7 @@
 				9647DA45208E1AF9000EA239 /* Response.swift in Sources */,
 				963298A520BE833A0086DD69 /* CSConfidence.swift in Sources */,
 				138D724520805A6300EED579 /* DeepSocial.xcdatamodeld in Sources */,
+				96C8FBF6211852F00003B957 /* AvailableLocationsVC.swift in Sources */,
 				9685FE5220980DB200E3384A /* SentenceCell.swift in Sources */,
 				963ABE1520F2F896005FBA2B /* HomeViewController.swift in Sources */,
 				96A3AA5220819ED7009BCB1D /* NLEntity.swift in Sources */,
@@ -825,6 +840,7 @@
 				9634CE5220961286009397A8 /* LocalCoordinator.swift in Sources */,
 				96B07F082084C185002E2339 /* NLCategory.swift in Sources */,
 				9664652F20B2791F003B23DD /* Ex-FIRUserInfo.swift in Sources */,
+				967C2D072116B96E009E48EC /* LocTrendingVC.swift in Sources */,
 				96925B0F2083129500522A80 /* NLSentiment.swift in Sources */,
 				965BB03D208CA68200521A8A /* MenuViewController.swift in Sources */,
 				96247EA820CCE18F00D18E4B /* EntitySentimentCell.swift in Sources */,

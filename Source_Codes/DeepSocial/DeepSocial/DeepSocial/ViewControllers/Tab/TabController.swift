@@ -21,31 +21,32 @@ class TabController: UIViewController {
     var homeAITechnologies:UIViewController!
     var homePerformance:UIViewController!
     var homeTrending:UIViewController!
+    var availableLocsVC:UIViewController!
     
-    
+    lazy var searchBar:UISearchBar = UISearchBar(frame: CGRect.zero)
     var selectedIndex: Int = 0
     
     let titleFirstSegment = "Trends"
     let titleSecondSegment = "Performances"
     let titleThirdSegment = "Technologies"
-
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        addLeftBarButtonWithImage(UIImage(named: "ic_left_menu")!.withRenderingMode(.alwaysOriginal))
-        
+        addMenuAtLeftMenu()
+        addRightSearchMenu()
+        setupSearchbar()
+        setupAvailableLocations()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         let storyBoardMain = UIStoryboard(name: "Main", bundle: nil)
-//        let storyBoardAIHome = UIStoryboard(name: "Main", bundle: nil)
         homeAITechnologies = storyBoardMain.instantiateViewController(withIdentifier: "HomeViewController")
         
-//        let storyBoardProduct = UIStoryboard(name: "Main", bundle: nil)
         homePerformance = storyBoardMain.instantiateViewController(withIdentifier: "PerformancesVC")
         
-//        let storyBoardTrending = UIStoryboard(name: "Main", bundle: nil)
         homeTrending = storyBoardMain.instantiateViewController(withIdentifier: "TrendingVC")
-        
         
         subViewControllers = [homeTrending, homePerformance, homeAITechnologies]
         
@@ -86,6 +87,8 @@ class TabController: UIViewController {
 
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        definesPresentationContext = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -99,6 +102,8 @@ class TabController: UIViewController {
         segmentView.selectedSegmentioIndex = 0
     }
     
+    
+    // MARK: - Functions
     func setupSegmentView(view:Segmentio,items:[SegmentioItem]) {
         
         
@@ -126,7 +131,68 @@ class TabController: UIViewController {
         
         view.setup(content: items, style: SegmentioStyle.imageOverLabel, options: options)
     }
+    
+    func addMenuAtLeftMenu() {
+        addLeftBarButtonWithImage(UIImage(named: "ic_left_menu")!.withRenderingMode(.alwaysOriginal))
+    }
+    
+    func setupSearchbar() {
+        searchBar.delegate = self
+    }
+    
+    func setupAvailableLocations() {
+        let availableVC = AvailableLocationsVC.initiate()
+        self.availableLocsVC = availableVC
+    }
 
+    func addRightSearchMenu() {
+        let image = UIImage(named: "ic_search")!.withRenderingMode(.alwaysOriginal)
+        
+        let rightButton: UIBarButtonItem = UIBarButtonItem(image: image, style: UIBarButtonItemStyle.plain, target: self, action: #selector(touchingInside_btnRightMenu(_:)))
+        navigationItem.rightBarButtonItem = rightButton
+        
+    }
+    
+    func cleanRightSearchMenu() {
+        navigationItem.rightBarButtonItem = nil
+    }
+    
+    func addSearchBarToNavigation() {
+        searchBar.placeholder = "Search available locations"
+        
+        navigationItem.titleView = searchBar
+    }
+    
+    func cleanSearchBar() {
+        navigationItem.titleView = nil
+    }
+    
+    func addBackNavigation() {
+        let image = UIImage(named: "ic_back")!.withRenderingMode(.alwaysOriginal)
+        
+        let backButton: UIBarButtonItem = UIBarButtonItem(image: image, style: UIBarButtonItemStyle.plain, target: self, action: #selector(touchingInside_btnBack(_:)))
+        navigationItem.leftBarButtonItem = backButton
+
+    }
+    
+    func cleanBackNavigation() {
+        addMenuAtLeftMenu()
+    }
+    
+    func showAvailableLocations() {
+        addChildViewController(availableLocsVC)
+        
+        availableLocsVC.view.frame = view.bounds
+        view.addSubview(availableLocsVC.view)
+        
+        availableLocsVC.didMove(toParentViewController: self)
+    }
+    
+    func hideAvailableLocations() {
+        availableLocsVC.willMove(toParentViewController: nil)
+        availableLocsVC.view.removeFromSuperview()
+        availableLocsVC.removeFromParentViewController()
+    }
     
     func initSegmentView() -> Segmentio {
         let segmentView = Segmentio(frame: CGRect.zero)
@@ -156,10 +222,13 @@ class TabController: UIViewController {
         switch selectedIndex {
         case 0:
             title = titleFirstSegment
+            addRightSearchMenu()
         case 1:
             title = titleSecondSegment
+            cleanRightSearchMenu()
         case 2:
             title = titleThirdSegment
+            cleanRightSearchMenu()
         default:
             break
         }
@@ -173,6 +242,21 @@ class TabController: UIViewController {
     }
     
     // MARK: - IBActions
+    @objc func touchingInside_btnRightMenu(_ sender:Any) -> Void {
+        addSearchBarToNavigation()
+        cleanRightSearchMenu()
+        addBackNavigation()
+        searchBar.becomeFirstResponder()
+    }
+    
+    @objc func touchingInside_btnBack(_ sender:Any) -> Void {
+        searchBar.resignFirstResponder()
+        addRightSearchMenu()
+        cleanBackNavigation()
+        cleanSearchBar()
+        hideAvailableLocations()
+    }
+    
     @IBAction func didPressTab(_ sender: UIButton) {
         let previousIndex = selectedIndex
         
@@ -195,11 +279,6 @@ class TabController: UIViewController {
         
         nextVC.didMove(toParentViewController: self)
         
-        if selectedIndex == 0 {
-            title = titleFirstSegment
-        } else {
-            title = titleSecondSegment
-        }
     }
     
     
@@ -213,4 +292,15 @@ class TabController: UIViewController {
     }
     */
 
+}
+
+
+extension TabController:UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        showAvailableLocations()
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        
+    }
 }
