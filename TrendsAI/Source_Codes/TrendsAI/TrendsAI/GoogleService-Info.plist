@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>613695078863-7d3m0bdbbefndu10f3jmlft7dfiahchi.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.613695078863-7d3m0bdbbefndu10f3jmlft7dfiahchi</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAkDWZF2L7SHFMaDcsM5qI4tIPJ8jPBP7A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>613695078863</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.deepsocial.TrendsAI</string>
+	<key>PROJECT_ID</key>
+	<string>trendsai-563f6</string>
+	<key>STORAGE_BUCKET</key>
+	<string>trendsai-563f6.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:613695078863:ios:5f816f45915a6759</string>
+	<key>DATABASE_URL</key>
+	<string>https://trendsai-563f6.firebaseio.com</string>
+</dict>
+</plist>
