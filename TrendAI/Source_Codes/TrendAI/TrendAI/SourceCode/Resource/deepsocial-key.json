@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "deepsocial-197607",
+  "private_key_id": "fabd9ed000b0205c9a7d175cbc1372ee6f39a1f6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC6xocXqPh9XuHN\nyVadooqifvhd3qv+kbVj+NhQCLBSfWSeBk51YBiC9/KNVq87x6D8pNQuWynOIJt1\npdXt97P+cBE5bQAYQJ1sK7muvVEI9YbPEZZaoYIH8RYd4GSbdXEfZlkAV9aNUuGi\na6WOePPy+o+CjS60XZCBA0VKTtFan+k1GcgC2aTg4MjAPIo3HBSndMlfK7wZmLhz\nYhXwl03jpcsPDNQcvGdREhekHOioB/xCUKMgkebBc0CteWpclBd7NdZCTGZULuE3\nQdklScUAF/w2kkrnXStPCZBYt1Ljrqwz3fRf3nNRHT8lDH+gMoIfzbEj9na80R78\n+JK+uL+BAgMBAAECggEAF4hE5BPA1IGcX0JYpz11THpFOQUsVBjaqvu4PAPkPKMa\nMW4npifoiV52ZnK/Wv+mG77OvFUgbsfynlTkdSTqPjVeI4dFZZ4v12hTmZ22XzPE\nJkRtK60WsNZ3drswzITJrxmaPsNSanWWAnyf8X6cHzHiMUzaz2nMd5zIYaTi7BEW\nPzqNwIUhiAZKz3Aodq9a0NAWVxAhrjBLqSUHsciu8C1gYhw6RYiovesHPT3ylBSC\nJuSc8xzwhnxSzFRvNaosQIak4MOXDPfE2+Md7Y3QBOHELUvmuMyBe23SJDUd4soa\ndR2kG0bWxXXrXxK9j4BxlkLKo9DBIkks4HiCQTy6WwKBgQDo3qb3Qs0MM6sJxrlc\nF97Y6NIPJtv9FUmeB1wEeYXBAJQ8JzhKLn+79UJlw20V/u6DBkNaQHWQFCOghGfM\nRp2hyy/WpjASW/cduFdLVrcdBTh40HyYaNblC+OrfXfn/G43NU9xAn0a54+bekBI\nLVagzIia/GDbWQNbYfiqyn2sbwKBgQDNU83LoI7+ttY4KjRGQ1Uu91Fn8AHiTJAn\nJ+dEJVjzCtDDtGmxyve26QCrjL6bUub7iNLShfzB4kEE9+KVjTc2fHkkju9qP7eZ\n4RV/1FZTloLyGs0M9LPJ/hLN1ebnvcZXsyCqnhn6sgHll0XANmhJWcodYAYuinsx\nICGz/WsrDwKBgQCNW/NQ750XRhoSoi6NJ/RgCdzR084A8LYyltcV5Er8YQSbC1fR\nOC7UA0reCWajzpAsu1WRaMW0w3TpENcNmuQ/fd85VsKhsm/s+6UKF8aqeCvSswSf\nZCzm93Op+00ZZxPksZjayh71gRGc2PZCmjsW+3IFWyTUolE2XN+dlbP6QwKBgQCt\neJUQ6XiGOGCqGPYLOs3YHTkYsAxXbcoIWs0npMoOpF+WSHFXtZwtW5OmXAWZYqQl\ndQZwuKTABXBbSzaSlTlFfko3Gc+qG2T5y9GHKxU4D5xYAU6mGINhL5ghcQthVNMi\nuwLpQyO9yvCRUYmriAv5lLOOt9bhMTw9V+FBmOQW/wKBgDS+cAwmQ/QTAoeWIPzV\n5nR+2+qgonp4C/0u2t1PLI9Ll0/F4f+9QpmFqkqoyYfbhPwYhS2NaXgdKAGgZq6p\nmN3Kom6XcpRVjULY/qM74TiezzhqcG63oFRGhIt9hskqliIP6EBNbKFw+eCF2ATe\nzzknGzS1JlFKWf9yO5lTngmc\n-----END PRIVATE KEY-----\n",
+  "client_email": "api-deepsocial@deepsocial-197607.iam.gserviceaccount.com",
+  "client_id": "108397437723901612703",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/api-deepsocial%40deepsocial-197607.iam.gserviceaccount.com"
+}
