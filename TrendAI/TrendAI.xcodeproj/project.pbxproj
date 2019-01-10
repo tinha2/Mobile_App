@@ -8,6 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		1F26FF11E4F88EB6D35F4BCB /* Pods_TrendAI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A1943BE8E61B9A73A9BF1B /* Pods_TrendAI.framework */; };
+		2E60182621E740DB00BA2009 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60181521E740D400BA2009 /* UIDevice+Extension.swift */; };
+		2E60182721E740DB00BA2009 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60181621E740D400BA2009 /* Array+Extension.swift */; };
+		2E60182821E740DB00BA2009 /* RawRepresentable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60181721E740D400BA2009 /* RawRepresentable+Extension.swift */; };
+		2E60182921E740DB00BA2009 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60181821E740D500BA2009 /* UICollectionView+Extension.swift */; };
+		2E60182A21E740DB00BA2009 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60181921E740D500BA2009 /* String+Extension.swift */; };
+		2E60182B21E740DB00BA2009 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60181A21E740D500BA2009 /* UIViewController+Extension.swift */; };
+		2E60182C21E740DB00BA2009 /* Date+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60181B21E740D600BA2009 /* Date+Extenstion.swift */; };
+		2E60182D21E740DB00BA2009 /* Observable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60181C21E740D600BA2009 /* Observable+Extension.swift */; };
+		2E60182E21E740DB00BA2009 /* AppDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60181D21E740D600BA2009 /* AppDelegate+Extension.swift */; };
+		2E60182F21E740DB00BA2009 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60181E21E740D700BA2009 /* UITableView+Extension.swift */; };
+		2E60183021E740DB00BA2009 /* TimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60181F21E740D700BA2009 /* TimeInterval+Extension.swift */; };
+		2E60183121E740DB00BA2009 /* UIImagePickerController+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60182021E740D800BA2009 /* UIImagePickerController+RxSwift.swift */; };
+		2E60183221E740DB00BA2009 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60182121E740D800BA2009 /* UIView+Extension.swift */; };
+		2E60183321E740DB00BA2009 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60182221E740D800BA2009 /* UILabel+Extension.swift */; };
+		2E60183421E740DB00BA2009 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60182321E740D900BA2009 /* UITextField+Extension.swift */; };
+		2E60183521E740DB00BA2009 /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60182421E740DA00BA2009 /* UITextView+Extension.swift */; };
+		2E60183621E740DB00BA2009 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60182521E740DA00BA2009 /* NSObject+Extension.swift */; };
+		2E60183E21E7411A00BA2009 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60183821E7411700BA2009 /* ActivityIndicator.swift */; };
+		2E60183F21E7411A00BA2009 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60183921E7411800BA2009 /* Log.swift */; };
+		2E60184021E7411A00BA2009 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60183A21E7411800BA2009 /* Error.swift */; };
+		2E60184121E7411A00BA2009 /* RxImagePickerControllerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60183B21E7411900BA2009 /* RxImagePickerControllerDelegateProxy.swift */; };
+		2E60184221E7411A00BA2009 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60183C21E7411900BA2009 /* UserDefault.swift */; };
+		2E60184321E7411A00BA2009 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60183D21E7411900BA2009 /* ErrorTracker.swift */; };
+		2E60184821E7415C00BA2009 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60184521E7415C00BA2009 /* BaseService.swift */; };
+		2E60184921E7415C00BA2009 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60184621E7415C00BA2009 /* Constants.swift */; };
+		2E60184A21E7415C00BA2009 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60184721E7415C00BA2009 /* API.swift */; };
+		2E60184F21E7458C00BA2009 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60184D21E7458C00BA2009 /* MenuTableViewCell.swift */; };
+		2E60185021E7458C00BA2009 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E60184E21E7458C00BA2009 /* MenuTableViewCell.xib */; };
+		2E60185421E746CD00BA2009 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60185121E746CD00BA2009 /* PaymentViewController.swift */; };
+		2E60185521E746CD00BA2009 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60185221E746CD00BA2009 /* PaymentViewModel.swift */; };
+		2E60185621E746CD00BA2009 /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E60185321E746CD00BA2009 /* PaymentViewController.xib */; };
+		2E60185921E7480E00BA2009 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60185721E7480E00BA2009 /* BaseViewModel.swift */; };
+		2E60185A21E7480E00BA2009 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60185821E7480E00BA2009 /* BaseViewController.swift */; };
+		2E60185F21E7483700BA2009 /* ViewWithXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60185C21E7483600BA2009 /* ViewWithXib.swift */; };
+		2E60186021E7483700BA2009 /* IndicatorCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60185E21E7483600BA2009 /* IndicatorCustomView.swift */; };
 		846F633921AD3664007BCACF /* LoginByTwitter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846F633721AD3664007BCACF /* LoginByTwitter.xib */; };
 		846F633A21AD3664007BCACF /* LoginByTwitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F633821AD3664007BCACF /* LoginByTwitterView.swift */; };
 		846F633F21AD5EBF007BCACF /* SocialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F633E21AD5EBF007BCACF /* SocialManager.swift */; };
@@ -63,6 +98,41 @@
 
 /* Begin PBXFileReference section */
 		17A34678139E00F29E7377B6 /* Pods-TrendAI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendAI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrendAI/Pods-TrendAI.debug.xcconfig"; sourceTree = "<group>"; };
+		2E60181521E740D400BA2009 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		2E60181621E740D400BA2009 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		2E60181721E740D400BA2009 /* RawRepresentable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RawRepresentable+Extension.swift"; sourceTree = "<group>"; };
+		2E60181821E740D500BA2009 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		2E60181921E740D500BA2009 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		2E60181A21E740D500BA2009 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		2E60181B21E740D600BA2009 /* Date+Extenstion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extenstion.swift"; sourceTree = "<group>"; };
+		2E60181C21E740D600BA2009 /* Observable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Extension.swift"; sourceTree = "<group>"; };
+		2E60181D21E740D600BA2009 /* AppDelegate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extension.swift"; sourceTree = "<group>"; };
+		2E60181E21E740D700BA2009 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		2E60181F21E740D700BA2009 /* TimeInterval+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extension.swift"; sourceTree = "<group>"; };
+		2E60182021E740D800BA2009 /* UIImagePickerController+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImagePickerController+RxSwift.swift"; sourceTree = "<group>"; };
+		2E60182121E740D800BA2009 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		2E60182221E740D800BA2009 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		2E60182321E740D900BA2009 /* UITextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		2E60182421E740DA00BA2009 /* UITextView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
+		2E60182521E740DA00BA2009 /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+		2E60183821E7411700BA2009 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		2E60183921E7411800BA2009 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		2E60183A21E7411800BA2009 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		2E60183B21E7411900BA2009 /* RxImagePickerControllerDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxImagePickerControllerDelegateProxy.swift; sourceTree = "<group>"; };
+		2E60183C21E7411900BA2009 /* UserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		2E60183D21E7411900BA2009 /* ErrorTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
+		2E60184521E7415C00BA2009 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		2E60184621E7415C00BA2009 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2E60184721E7415C00BA2009 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		2E60184D21E7458C00BA2009 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		2E60184E21E7458C00BA2009 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		2E60185121E746CD00BA2009 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		2E60185221E746CD00BA2009 /* PaymentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
+		2E60185321E746CD00BA2009 /* PaymentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
+		2E60185721E7480E00BA2009 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		2E60185821E7480E00BA2009 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2E60185C21E7483600BA2009 /* ViewWithXib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewWithXib.swift; sourceTree = "<group>"; };
+		2E60185E21E7483600BA2009 /* IndicatorCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorCustomView.swift; sourceTree = "<group>"; };
 		33A1943BE8E61B9A73A9BF1B /* Pods_TrendAI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrendAI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44348018D665E302307A0EA1 /* Pods-TrendAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendAI.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrendAI/Pods-TrendAI.release.xcconfig"; sourceTree = "<group>"; };
 		846F633721AD3664007BCACF /* LoginByTwitter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginByTwitter.xib; sourceTree = "<group>"; };
@@ -136,6 +206,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E60183721E7410A00BA2009 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2E60183821E7411700BA2009 /* ActivityIndicator.swift */,
+				2E60183A21E7411800BA2009 /* Error.swift */,
+				2E60183D21E7411900BA2009 /* ErrorTracker.swift */,
+				2E60183921E7411800BA2009 /* Log.swift */,
+				2E60183B21E7411900BA2009 /* RxImagePickerControllerDelegateProxy.swift */,
+				2E60183C21E7411900BA2009 /* UserDefault.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		2E60184421E7414E00BA2009 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2E60184721E7415C00BA2009 /* API.swift */,
+				2E60184521E7415C00BA2009 /* BaseService.swift */,
+				2E60184621E7415C00BA2009 /* Constants.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2E60184B21E741F800BA2009 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				2E60184C21E7420200BA2009 /* Payment */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		2E60184C21E7420200BA2009 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				2E60185121E746CD00BA2009 /* PaymentViewController.swift */,
+				2E60185321E746CD00BA2009 /* PaymentViewController.xib */,
+				2E60185221E746CD00BA2009 /* PaymentViewModel.swift */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		2E60185B21E7483600BA2009 /* ViewWithXib */ = {
+			isa = PBXGroup;
+			children = (
+				2E60185C21E7483600BA2009 /* ViewWithXib.swift */,
+			);
+			path = ViewWithXib;
+			sourceTree = "<group>";
+		};
+		2E60185D21E7483600BA2009 /* Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				2E60185E21E7483600BA2009 /* IndicatorCustomView.swift */,
+			);
+			path = Indicator;
+			sourceTree = "<group>";
+		};
 		696918797FD485D4F54B4F98 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +302,8 @@
 			isa = PBXGroup;
 			children = (
 				84883DCE21ABFF3B004F122C /* MenuViewController.swift */,
+				2E60184D21E7458C00BA2009 /* MenuTableViewCell.swift */,
+				2E60184E21E7458C00BA2009 /* MenuTableViewCell.xib */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -225,6 +354,9 @@
 		962B34B7219206B7007C503E /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				2E60184B21E741F800BA2009 /* Screens */,
+				2E60184421E7414E00BA2009 /* Networking */,
+				2E60183721E7410A00BA2009 /* Helper */,
 				84883E0921AC172D004F122C /* Resource */,
 				84883DD221AC1719004F122C /* Models */,
 				967C027E2199BE54002B4126 /* Extensions */,
@@ -323,6 +455,8 @@
 		962B34F1219206B7007C503E /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				2E60185821E7480E00BA2009 /* BaseViewController.swift */,
+				2E60185721E7480E00BA2009 /* BaseViewModel.swift */,
 				962B34F2219206B7007C503E /* InputViewController.swift */,
 				962B34F3219206B7007C503E /* TWBaseViewController.swift */,
 			);
@@ -332,6 +466,8 @@
 		962B34F9219206B7007C503E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2E60185D21E7483600BA2009 /* Indicator */,
+				2E60185B21E7483600BA2009 /* ViewWithXib */,
 				846F633621AD3638007BCACF /* LoginByTwitter */,
 				962B34FA219206B7007C503E /* CollectionCell */,
 				962B34FC219206B7007C503E /* TabButton */,
@@ -385,6 +521,23 @@
 		967C027E2199BE54002B4126 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2E60181D21E740D600BA2009 /* AppDelegate+Extension.swift */,
+				2E60181621E740D400BA2009 /* Array+Extension.swift */,
+				2E60181B21E740D600BA2009 /* Date+Extenstion.swift */,
+				2E60182521E740DA00BA2009 /* NSObject+Extension.swift */,
+				2E60181C21E740D600BA2009 /* Observable+Extension.swift */,
+				2E60181721E740D400BA2009 /* RawRepresentable+Extension.swift */,
+				2E60181921E740D500BA2009 /* String+Extension.swift */,
+				2E60181F21E740D700BA2009 /* TimeInterval+Extension.swift */,
+				2E60181821E740D500BA2009 /* UICollectionView+Extension.swift */,
+				2E60181521E740D400BA2009 /* UIDevice+Extension.swift */,
+				2E60182021E740D800BA2009 /* UIImagePickerController+RxSwift.swift */,
+				2E60182221E740D800BA2009 /* UILabel+Extension.swift */,
+				2E60181E21E740D700BA2009 /* UITableView+Extension.swift */,
+				2E60182321E740D900BA2009 /* UITextField+Extension.swift */,
+				2E60182421E740DA00BA2009 /* UITextView+Extension.swift */,
+				2E60182121E740D800BA2009 /* UIView+Extension.swift */,
+				2E60181A21E740D500BA2009 /* UIViewController+Extension.swift */,
 				84883DCA21ABFF06004F122C /* UIViewController+Alerts.h */,
 				84883DCB21ABFF06004F122C /* UIViewController+Alerts.m */,
 				967C027F2199C036002B4126 /* Ex+FIRUser.swift */,
@@ -508,6 +661,8 @@
 				962B3519219206B7007C503E /* Login.storyboard in Resources */,
 				969999F02190B7A700E39B37 /* GoogleService-Info.plist in Resources */,
 				962B351A219206B7007C503E /* Tabbar.storyboard in Resources */,
+				2E60185621E746CD00BA2009 /* PaymentViewController.xib in Resources */,
+				2E60185021E7458C00BA2009 /* MenuTableViewCell.xib in Resources */,
 				84883E0E21AC172D004F122C /* deepsocial-key.json in Resources */,
 				962B3518219206B7007C503E /* Main.storyboard in Resources */,
 				962B3547219206B7007C503E /* LoadingView.xib in Resources */,
@@ -562,32 +717,42 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TrendAI/Pods-TrendAI-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
 				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
 				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/OAuthSwift/OAuthSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/TTGTagCollectionView/TTGTagCollectionView.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OAuthSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTGTagCollectionView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -607,41 +772,74 @@
 				962B353B219206B7007C503E /* TabController.swift in Sources */,
 				969999DF2190A71700E39B37 /* ViewController.swift in Sources */,
 				962B3545219206B7007C503E /* LocationCell.swift in Sources */,
+				2E60182821E740DB00BA2009 /* RawRepresentable+Extension.swift in Sources */,
+				2E60183E21E7411A00BA2009 /* ActivityIndicator.swift in Sources */,
+				2E60182E21E740DB00BA2009 /* AppDelegate+Extension.swift in Sources */,
 				962B3559219206B7007C503E /* ButtonWithImageAndTitleExtension.swift in Sources */,
 				84883DCC21ABFF06004F122C /* UIViewController+Alerts.m in Sources */,
+				2E60182C21E740DB00BA2009 /* Date+Extenstion.swift in Sources */,
+				2E60184F21E7458C00BA2009 /* MenuTableViewCell.swift in Sources */,
 				962B353C219206B7007C503E /* AvailableLocationsVC.swift in Sources */,
 				963EF08321C3F33A006C9065 /* DSErrors.swift in Sources */,
 				84883DD121ABFFC8004F122C /* EmailViewController.swift in Sources */,
 				84883DF421AC1719004F122C /* Ex-FIRUserInfo.swift in Sources */,
 				962B3540219206B7007C503E /* TWBaseViewController.swift in Sources */,
+				2E60183F21E7411A00BA2009 /* Log.swift in Sources */,
 				962B3516219206B7007C503E /* LocalCoordinator.swift in Sources */,
+				2E60185521E746CD00BA2009 /* PaymentViewModel.swift in Sources */,
+				2E60182B21E740DB00BA2009 /* UIViewController+Extension.swift in Sources */,
+				2E60183621E740DB00BA2009 /* NSObject+Extension.swift in Sources */,
 				846F634121AD603F007BCACF /* SessionManager.swift in Sources */,
 				962B3515219206B7007C503E /* APICoordinator.swift in Sources */,
+				2E60182621E740DB00BA2009 /* UIDevice+Extension.swift in Sources */,
 				84883DF721AC1719004F122C /* TWLocation.swift in Sources */,
 				967C02802199C036002B4126 /* Ex+FIRUser.swift in Sources */,
 				84883DF621AC1719004F122C /* TWTrend.swift in Sources */,
+				2E60185A21E7480E00BA2009 /* BaseViewController.swift in Sources */,
 				962B3546219206B7007C503E /* TabButton.swift in Sources */,
+				2E60184321E7411A00BA2009 /* ErrorTracker.swift in Sources */,
+				2E60184821E7415C00BA2009 /* BaseService.swift in Sources */,
 				84883DC921ABFE52004F122C /* LoginViewController.swift in Sources */,
+				2E60183521E740DB00BA2009 /* UITextView+Extension.swift in Sources */,
 				962B3514219206B7007C503E /* RouteCoordinator.swift in Sources */,
+				2E60183421E740DB00BA2009 /* UITextField+Extension.swift in Sources */,
+				2E60183321E740DB00BA2009 /* UILabel+Extension.swift in Sources */,
+				2E60183221E740DB00BA2009 /* UIView+Extension.swift in Sources */,
 				84883DF521AC1719004F122C /* ProviderInfor.swift in Sources */,
+				2E60184221E7411A00BA2009 /* UserDefault.swift in Sources */,
 				BB418B3C21AE221800789033 /* TwitterSession.swift in Sources */,
 				84883E0321AC1719004F122C /* Response.swift in Sources */,
+				2E60182D21E740DB00BA2009 /* Observable+Extension.swift in Sources */,
 				84883E0721AC1719004F122C /* eNum.swift in Sources */,
+				2E60185F21E7483700BA2009 /* ViewWithXib.swift in Sources */,
 				967C02822199C3F4002B4126 /* UIManager.swift in Sources */,
 				84883E1021AC172D004F122C /* JsonSample.swift in Sources */,
 				84883DF321AC1719004F122C /* UIImage+Rx.swift in Sources */,
 				962B353A219206B7007C503E /* LocTrendingVC.swift in Sources */,
+				2E60184121E7411A00BA2009 /* RxImagePickerControllerDelegateProxy.swift in Sources */,
 				962B353F219206B7007C503E /* InputViewController.swift in Sources */,
 				962B3536219206B7007C503E /* TwitterAPI.swift in Sources */,
 				962B3538219206B7007C503E /* SearchTimelineVC.swift in Sources */,
+				2E60182721E740DB00BA2009 /* Array+Extension.swift in Sources */,
 				96597E37219A810F00E8B3A0 /* PermissionCoordinator.swift in Sources */,
 				962B351C219206B7007C503E /* Common.swift in Sources */,
 				969999DD2190A71700E39B37 /* AppDelegate.swift in Sources */,
+				2E60185921E7480E00BA2009 /* BaseViewModel.swift in Sources */,
+				2E60182921E740DB00BA2009 /* UICollectionView+Extension.swift in Sources */,
+				2E60183121E740DB00BA2009 /* UIImagePickerController+RxSwift.swift in Sources */,
+				2E60184921E7415C00BA2009 /* Constants.swift in Sources */,
+				2E60183021E740DB00BA2009 /* TimeInterval+Extension.swift in Sources */,
+				2E60184021E7411A00BA2009 /* Error.swift in Sources */,
 				962B3537219206B7007C503E /* PerformancesVC.swift in Sources */,
 				84883DCF21ABFF3B004F122C /* MenuViewController.swift in Sources */,
 				962B3548219206B7007C503E /* LoadingView.swift in Sources */,
+				2E60186021E7483700BA2009 /* IndicatorCustomView.swift in Sources */,
 				846F633A21AD3664007BCACF /* LoginByTwitterView.swift in Sources */,
+				2E60185421E746CD00BA2009 /* PaymentViewController.swift in Sources */,
 				846F633F21AD5EBF007BCACF /* SocialManager.swift in Sources */,
+				2E60182A21E740DB00BA2009 /* String+Extension.swift in Sources */,
+				2E60184A21E7415C00BA2009 /* API.swift in Sources */,
+				2E60182F21E740DB00BA2009 /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

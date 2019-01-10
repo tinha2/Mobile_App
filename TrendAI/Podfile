@@ -21,4 +21,8 @@ target 'TrendAI' do
   pod 'MaterialComponents/TextFields'
   pod 'MaterialComponents/Buttons'
 
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+  pod 'NVActivityIndicatorView'
+  pod 'TTGTagCollectionView'
 end

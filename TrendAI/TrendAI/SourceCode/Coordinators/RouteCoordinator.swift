@@ -134,7 +134,6 @@ extension RouteCoordinator {
     func showMenu(from vc:UIViewController) -> Void {
         vc.present(SideMenuManager.default.menuLeftNavigationController!, animated: true, completion: nil)
     }
-    
 }
 
 //extension RouteCoordinator:FUIAuthDelegate {

@@ -286,7 +286,7 @@ class EmailViewController: UIViewController {
     
     if let email = usernameTextField.text, let password = passwordTextField.text {
       showSpinner {
-        SessionManager.signIn(withEmail: email, password: password, { (error) in
+        SessionManagers.signIn(withEmail: email, password: password, { (error) in
             self.hideSpinner {
                 if let unilError = error {
                     switch unilError {
@@ -314,7 +314,7 @@ class EmailViewController: UIViewController {
     if let email = usernameTextField.text, let password = passwordTextField.text {
         self.showSpinner {
             // [START create_user]
-            SessionManager.createUser(withUsername: email, password: password, { (error) in
+            SessionManagers.createUser(withUsername: email, password: password, { (error) in
                 self.hideSpinner {
                     if let unilError = error {
                         self.showMessagePrompt(unilError.localizedDescription)

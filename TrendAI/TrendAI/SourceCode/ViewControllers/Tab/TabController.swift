@@ -112,7 +112,7 @@ class TabController: UIViewController {
         didPressTab(buttons[selectedIndex])
         
         checkTwitterSession()
-        SessionManager.shared.onChangedTwitterProvider = { [weak self] (value)  in
+        SessionManagers.shared.onChangedTwitterProvider = { [weak self] (value)  in
             if value {
                 self?.hideLoginningTwitterView()
             }
@@ -133,14 +133,14 @@ class TabController: UIViewController {
     // MARK: - Functions
     
     func checkTwitterSession() {
-        if !SessionManager.shared.hasTwitterProvider() {
+        if !SessionManagers.shared.hasTwitterProvider() {
             state = .loginTwitter
             doAddingTwitter()
         }
     }
     
     func doAddingTwitter() {
-        SessionManager.addTwitterAccount(self, { [unowned self](_, error) in
+        SessionManagers.addTwitterAccount(self, { [unowned self](_, error) in
             if let unilError = error {
                 switch unilError {
                 case .twitterExistByAnother:
