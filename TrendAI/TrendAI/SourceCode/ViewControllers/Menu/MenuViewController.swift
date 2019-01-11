@@ -179,6 +179,8 @@ extension MenuViewController:UITableViewDelegate {
             shouldOpenTabComponent.onNext(.Trends)
         case 1:
             shouldOpenTabComponent.onNext(.Payment)
+        case 2:
+            shouldOpenTabComponent.onNext(.Topics)
         default:
             break
         }

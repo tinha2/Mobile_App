@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TrendAI/SourceCode/Coordinators/RouteCoordinator.swift"
-            timestampString = "568860972.883124"
+            filePath = "TrendAI/SourceCode/Screens/Topics/TopicTableViewCell.swift"
+            timestampString = "568878803.227421"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
-            landmarkName = "showMenu(from:)"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "setupRx()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

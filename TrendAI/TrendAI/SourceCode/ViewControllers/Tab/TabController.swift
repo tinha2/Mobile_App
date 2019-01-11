@@ -24,6 +24,7 @@ enum TabComponents: Int {
     case Performances
     case Technologies
     case Payment
+    case Topics
 }
 
 let shouldOpenTabComponent = PublishSubject<TabComponents>()
@@ -46,6 +47,7 @@ class TabController: BaseViewController {
     var homeTrending:UIViewController!
     var availableLocsVC:AvailableLocationsVC!
     var paymentVC: PaymentViewController!
+    var trendsTopic: TopicViewController!
     
     var segmentItems:[SegmentItem] = []
     
@@ -258,8 +260,9 @@ class TabController: BaseViewController {
         homeTrending = storyBoardMain.instantiateViewController(withIdentifier: "TrendingVC")
         
         paymentVC = PaymentViewController()
+        trendsTopic = TopicViewController()
         
-        subViewControllers = [homeTrending, homePerformance, homeAITechnologies, paymentVC]
+        subViewControllers = [homeTrending, homePerformance, homeAITechnologies, paymentVC, trendsTopic]
         
         let iconPerformance = #imageLiteral(resourceName: "ic_performance").withRenderingMode(.alwaysOriginal)
         let selectedIconPerformance = #imageLiteral(resourceName: "ic_performance_selected").withRenderingMode(.alwaysOriginal)
