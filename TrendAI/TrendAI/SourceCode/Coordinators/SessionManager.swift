@@ -25,8 +25,8 @@ enum FIBAuthError:Error {
 
 typealias CompletionUserStatus = (User?,FIBAuthError?)->Void
 
-class SessionManager {
-    static let shared = SessionManager()
+class SessionManagers {
+    static let shared = SessionManagers()
     var onChangedTwitterProvider:((Bool)->Void)?
     
     static func loginWithTwitter(_ fromViewController:UIViewController,_ completion:@escaping CompletionError) {
@@ -55,7 +55,7 @@ class SessionManager {
     }
     
     static func addTwitterAccount(_ fromViewController:UIViewController,_ completion:@escaping CompletionUserStatus) -> Void {
-        let sessionManager = SessionManager.shared
+        let sessionManager = SessionManagers.shared
         SocialManager.shared.loginWithTwitter(fromViewController) { (session, error) in
             if error != nil {
                 sessionManager.onChangedTwitterProvider?(sessionManager.hasTwitterProvider())
@@ -64,7 +64,7 @@ class SessionManager {
             } else if let unnilSession = session {
                 fromViewController.view.showLoading()
                 let credential = TwitterAuthProvider.credential(withToken: unnilSession.token, secret: unnilSession.secret)
-                SessionManager.shared.getCurrentUser()?.linkAndRetrieveData(with: credential, completion: { (result, errorAuth) in
+                SessionManagers.shared.getCurrentUser()?.linkAndRetrieveData(with: credential, completion: { (result, errorAuth) in
                     sessionManager.onChangedTwitterProvider?(sessionManager.hasTwitterProvider())
                     if let unilError = errorAuth as NSError? {
                         switch unilError.code {

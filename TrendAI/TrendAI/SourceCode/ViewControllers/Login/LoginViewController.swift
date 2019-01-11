@@ -51,11 +51,11 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(animated)
         view.showLoading()
         
-        if let user = SessionManager.shared.getCurrentUser() {
+        if let user = SessionManagers.shared.getCurrentUser() {
             user.reload(completion: { [unowned self](error) in
                 if let unilErr = error {
                     UIManager.showErrorAlert(withViewController: self, error: unilErr)
-                    _ = SessionManager.shared.signOut()
+                    _ = SessionManagers.shared.signOut()
                 } else {
                     G_ROUTE_COORDINATOR.presentHome()
                 }
@@ -155,7 +155,7 @@ class LoginViewController: UIViewController {
     func showAlerToLoginByTwitter(_ email:String) {
         isProcessing = true
         UIManager.showAlert(withViewController: self, content: "You need to login to Twitter to use this app", type: .announcement) {
-            SessionManager.loginWithTwitter(self, { (error) in
+            SessionManagers.loginWithTwitter(self, { (error) in
                 if let unilError = error {
                     UIManager.showErrorAlert(withViewController: self, error: unilError) {
                         self.showAlerToLoginByTwitter(email)
@@ -178,7 +178,7 @@ class LoginViewController: UIViewController {
 
   @objc @IBAction func touchingInside_btnLoginWithTwitter(_ sender:Any) -> Void {
     view.showLoading()
-    SessionManager.loginWithTwitter(self) { (error) in
+    SessionManagers.loginWithTwitter(self) { (error) in
         self.view.hideLoading()
         
         guard let error = error else {

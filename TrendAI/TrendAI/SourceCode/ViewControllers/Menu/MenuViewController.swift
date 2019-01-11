@@ -23,14 +23,14 @@ class MenuViewController: UIViewController {
     
     let bag = DisposeBag()
     
+    var menus = ["Trends", "Go Premium", "Trend Topics"]
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
-
+        tableView.register(MenuTableViewCell.self)
         providers = [
             ProviderInfor(provider: .twitter)
         ]
@@ -42,7 +42,7 @@ class MenuViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let user = SessionManager.shared.getCurrentUser() {
+        if let user = SessionManagers.shared.getCurrentUser() {
             updateProviderIntoModel(user: user)
         }
     }
@@ -107,22 +107,28 @@ extension MenuViewController:UITableViewDataSource {
             return providers.count
         }
         
-        return 0
+        return menus.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let provider = providers[indexPath.row]
-        let reusableCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
-
-        if let cell = reusableCell {
-            update(provider: provider, on: cell)
-            return cell
-        } else {
-            let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
-            cell.selectionStyle = .none
-            update(provider: provider, on: cell)
-            return cell
+        if indexPath.section == 0 {
+            let provider = providers[indexPath.row]
+            let reusableCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
+            
+            if let cell = reusableCell {
+                update(provider: provider, on: cell)
+                return cell
+            } else {
+                let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
+                cell.selectionStyle = .none
+                update(provider: provider, on: cell)
+                return cell
+            }
         }
+        
+        let cell = tableView.dequeue(MenuTableViewCell.self)
+        cell.bindData(title: menus[indexPath.row])
+        return cell
     }
     
     func update(provider:ProviderInfor,on cell:UITableViewCell) {
@@ -153,15 +159,34 @@ extension MenuViewController:UITableViewDataSource {
 
 extension MenuViewController:UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let provider = providers[indexPath.row]
-        
-        if provider.provider.rawValue == AuthProvider.twitter.rawValue && !provider.isLogined {
-            addTwitterUser()
+        switch indexPath.section {
+        case 0:
+            let provider = providers[indexPath.row]
+            
+            if provider.provider.rawValue == AuthProvider.twitter.rawValue && !provider.isLogined {
+                addTwitterUser()
+            }
+        case 1:
+            didSelectMenu(indexPath.row)
+        default:
+            break
         }
     }
     
+    private func didSelectMenu(_ index: Int) {
+        switch index {
+        case 0:
+            shouldOpenTabComponent.onNext(.Trends)
+        case 1:
+            shouldOpenTabComponent.onNext(.Payment)
+        default:
+            break
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     func addTwitterUser() {
-        SessionManager.addTwitterAccount(self) { (user, error) in
+        SessionManagers.addTwitterAccount(self) { (user, error) in
             if let user = user {
                 self.updateProviderIntoModel(user: user)
                 self.tableView.reloadData()

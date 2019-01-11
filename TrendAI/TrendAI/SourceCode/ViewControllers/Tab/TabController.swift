@@ -19,12 +19,21 @@ struct SegmentItem {
     
 }
 
-class TabController: UIViewController {
+enum TabComponents: Int {
+    case Trends
+    case Performances
+    case Technologies
+    case Payment
+}
+
+let shouldOpenTabComponent = PublishSubject<TabComponents>()
+
+class TabController: BaseViewController {
     
     enum State {
         case normal
         case searching
-      case loginTwitter
+        case loginTwitter
     }
     
     @IBOutlet weak var tabContainView: UIView!
@@ -36,6 +45,7 @@ class TabController: UIViewController {
     var homePerformance:UIViewController!
     var homeTrending:UIViewController!
     var availableLocsVC:AvailableLocationsVC!
+    var paymentVC: PaymentViewController!
     
     var segmentItems:[SegmentItem] = []
     
@@ -85,7 +95,7 @@ class TabController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         addMenuAtLeftMenu()
         addRightSearchMenu()
         setupAvailableLocations()
@@ -112,35 +122,32 @@ class TabController: UIViewController {
         didPressTab(buttons[selectedIndex])
         
         checkTwitterSession()
-        SessionManager.shared.onChangedTwitterProvider = { [weak self] (value)  in
+        SessionManagers.shared.onChangedTwitterProvider = { [weak self] (value)  in
             if value {
                 self?.hideLoginningTwitterView()
             }
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
+    override func setupRx() {
+        shouldOpenTabComponent
+            .subscribe(onNext: { [weak self] (component) in
+                self?.openComponent(component.rawValue)
+            })
+            .disposed(by: disposeBag)
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-    }
-    
     
     // MARK: - Functions
     
     func checkTwitterSession() {
-        if !SessionManager.shared.hasTwitterProvider() {
+        if !SessionManagers.shared.hasTwitterProvider() {
             state = .loginTwitter
             doAddingTwitter()
         }
     }
     
     func doAddingTwitter() {
-        SessionManager.addTwitterAccount(self, { [unowned self](_, error) in
+        SessionManagers.addTwitterAccount(self, { [unowned self](_, error) in
             if let unilError = error {
                 switch unilError {
                 case .twitterExistByAnother:
@@ -188,39 +195,39 @@ class TabController: UIViewController {
             .drive(onNext: { [weak self](loc) in
                 //updateTo Trending screen
                 self?.setPlaceToTrend(place: loc)
-
+                
                 //hide choosing location
                 self?.state = .normal
             })
             .disposed(by: bag)
-      
+        
         availableVC.enableAroundTrends//.distinctUntilChanged()
-          .debug()
-          .asObservable()
-          .subscribe(onNext: { (isEnable) in
-            if isEnable {
-              if let userLocation = PermissionCoordinator.share.userLocation {
-                APICoordinator.share.getClosestLocations(location: userLocation.coordinate, completion: { [unowned self](locs, error) in
-                  if error != nil {
-                    print("getClosestLocations \(String(describing: error))")
-                  } else {
-                    self.setPlaceToTrend(place: locs[0])
-                  }
-                })
-              }
-              
-            } else {
-              
-            }
-          })
-          .disposed(by: bag)
+            .debug()
+            .asObservable()
+            .subscribe(onNext: { (isEnable) in
+                if isEnable {
+                    if let userLocation = PermissionCoordinator.share.userLocation {
+                        APICoordinator.share.getClosestLocations(location: userLocation.coordinate, completion: { [unowned self](locs, error) in
+                            if error != nil {
+                                print("getClosestLocations \(String(describing: error))")
+                            } else {
+                                self.setPlaceToTrend(place: locs[0])
+                            }
+                        })
+                    }
+                    
+                } else {
+                    
+                }
+            })
+            .disposed(by: bag)
     }
-  
-  func setPlaceToTrend(place:TWLocation) {
-    if let trendHomeTrend = self.homeTrending as? LocTrendingVC {
-      trendHomeTrend.currentLocation.onNext(place)
+    
+    func setPlaceToTrend(place:TWLocation) {
+        if let trendHomeTrend = self.homeTrending as? LocTrendingVC {
+            trendHomeTrend.currentLocation.onNext(place)
+        }
     }
-  }
     
     func setupInitialData() {
         if selectedIndex != 0 {
@@ -250,17 +257,19 @@ class TabController: UIViewController {
         
         homeTrending = storyBoardMain.instantiateViewController(withIdentifier: "TrendingVC")
         
-        subViewControllers = [homeTrending, homePerformance, homeAITechnologies]
+        paymentVC = PaymentViewController()
+        
+        subViewControllers = [homeTrending, homePerformance, homeAITechnologies, paymentVC]
         
         let iconPerformance = #imageLiteral(resourceName: "ic_performance").withRenderingMode(.alwaysOriginal)
         let selectedIconPerformance = #imageLiteral(resourceName: "ic_performance_selected").withRenderingMode(.alwaysOriginal)
         
         let performanceItem = SegmentItem(normalImg: iconPerformance, selectedImg: selectedIconPerformance, title: titleFirstSegment)        
         
-//        let iconTechnologies = #imageLiteral(resourceName: "ic_technologies").withRenderingMode(.alwaysOriginal)
-//        let selectedIconTechnologies = #imageLiteral(resourceName: "ic_technologies_selected").withRenderingMode(.alwaysOriginal)
-//
-//        let technologiesItem = SegmentItem(normalImg: iconTechnologies, selectedImg: selectedIconTechnologies, title: titleSecondSegment)
+        //        let iconTechnologies = #imageLiteral(resourceName: "ic_technologies").withRenderingMode(.alwaysOriginal)
+        //        let selectedIconTechnologies = #imageLiteral(resourceName: "ic_technologies_selected").withRenderingMode(.alwaysOriginal)
+        //
+        //        let technologiesItem = SegmentItem(normalImg: iconTechnologies, selectedImg: selectedIconTechnologies, title: titleSecondSegment)
         
         segmentItems = [performanceItem]
         
@@ -276,7 +285,7 @@ class TabController: UIViewController {
             
         }
     }
-
+    
     func addRightSearchMenu() {
         let image = UIImage(named: "ic_search")!.withRenderingMode(.alwaysOriginal)
         
@@ -304,22 +313,22 @@ class TabController: UIViewController {
         
         let backButton: UIBarButtonItem = UIBarButtonItem(image: image, style: UIBarButtonItem.Style.plain, target: self, action: #selector(touchingInside_btnBack(_:)))
         navigationItem.leftBarButtonItem = backButton
-
+        
     }
     
     func cleanBackNavigation() {
         navigationItem.leftBarButtonItem = nil
     }
-  
-  func addDoneNavigation() {
-    let doneButton: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(touchingInside_btnBack(_:)))
     
-    navigationItem.rightBarButtonItem = doneButton
-  }
-  
-  func cleanDoneNavigation() {
-    navigationItem.rightBarButtonItem = nil
-  }
+    func addDoneNavigation() {
+        let doneButton: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(touchingInside_btnBack(_:)))
+        
+        navigationItem.rightBarButtonItem = doneButton
+    }
+    
+    func cleanDoneNavigation() {
+        navigationItem.rightBarButtonItem = nil
+    }
     
     func showAvailableLocations() {
         addChild(availableLocsVC)
@@ -336,12 +345,12 @@ class TabController: UIViewController {
         availableLocsVC.removeFromParent()
     }
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         
-
+        
     }
     
     // MARK: - IBActions
@@ -352,7 +361,7 @@ class TabController: UIViewController {
     @objc func touchingInside_btnLeftMenu(_ sender:Any) -> Void {
         G_ROUTE_COORDINATOR.showMenu(from: self)
     }
-
+    
     
     @objc func touchingInside_btnBack(_ sender:Any) -> Void {
         state = .normal
@@ -382,30 +391,54 @@ class TabController: UIViewController {
         
         //Change title
         switch selectedIndex {
-            case 0:
-                title = titleFirstSegment
-                addRightSearchMenu()
-            case 1:
-                title = titleSecondSegment
-                cleanRightSearchMenu()
-            case 2:
-                title = titleThirdSegment
-                cleanRightSearchMenu()
-            default:
-                break
+        case 0:
+            title = titleFirstSegment
+            addRightSearchMenu()
+        case 1:
+            title = titleSecondSegment
+            cleanRightSearchMenu()
+        case 2:
+            title = titleThirdSegment
+            cleanRightSearchMenu()
+        default:
+            break
         }
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    private func openComponent(_ index: Int) {
+        let previousIndex = selectedIndex
+        
+        selectedIndex = index
+        
+        let previousVC = subViewControllers[previousIndex]
+        
+        previousVC.willMove(toParent: nil)
+        previousVC.view.removeFromSuperview()
+        previousVC.removeFromParent()
+        
+        let nextVC = subViewControllers[selectedIndex]
+        addChild(nextVC)
+        
+        nextVC.view.frame = contentView.bounds
+        contentView.addSubview(nextVC.view)
+        
+        nextVC.didMove(toParent: self)
+        
+        //Change title
+        switch selectedIndex {
+        case 0:
+            title = titleFirstSegment
+            addRightSearchMenu()
+        case 1:
+            title = titleSecondSegment
+            cleanRightSearchMenu()
+        case 2:
+            title = titleThirdSegment
+            cleanRightSearchMenu()
+        default:
+            break
+        }
     }
-    */
 }
 
 extension TabController:UISideMenuNavigationControllerDelegate {
