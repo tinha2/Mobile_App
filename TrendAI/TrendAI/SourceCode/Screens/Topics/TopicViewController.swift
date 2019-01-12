@@ -34,15 +34,32 @@ class TopicViewController: BaseViewController {
                       "Music", "Technology", "Government & Polytics",
                       "Science", "Arts & Culture", "Nonprofits", "Sports", "Gaming"]
         
-        for title in titles {
-            let tags = ["UITableView", "indexPath", "TopicViewController", "extension",
-                        "TopicTableViewCell", "delegate", "dataSource", "tbView", "self",
-                        "count", "topics"]
-            
-            let random = [3,4,5,6,7,8,9,10,11].randomElement() ?? 4
-            let mTags = tags.chunked(into: random).first ?? tags
-            
-            let topic = Topic(title: title, tags: mTags)
+        let subSport = ["NEL", "NBA", "MLB", "Soccer", "NASCAR", "WWE", "MMA", "Golf", "Tennis", "Basketball",
+                        "Track & Field", "Premeier League", "Olympics", "UFC", "MLS", "PGA", "Hockey", "Wrestling",
+                        "Baseball"]
+        let subNews = ["Weather", "History", "Politics", "Health", "General News", "Business & Finance", "US News",
+                       "World News", "Technology", "Science"]
+        let subMusic = ["Pop", "Hip-hop/Rap", "Country", "Latino Music", "R&B Soul", "Classic Rock", "Dance/electronic",
+                        "Metal", "Rock/Alt", "Indie/Experimental"]
+        let subEntertainment = ["Industry News", "Digital Creators", "Movies", "Music", "Television", "Pop Culture",
+                                "Style", "Arts", "Books"]
+        let subLifestyle = ["Parenting", "DIY & Home", "Travel", "Finess & Wellness", "Carc Culture", "Fashion & Beauty",
+                                "Lifestyle Personalities", "Food"]
+        let subArts = ["Design & Architecture", "Literature", "Photography", "Art", "Interesting Pictures"]
+        let subGovernment = ["Gov Officials & Agencies"]
+        let subGame = ["Celebrity Gamer", "Games", "Gaming News", "eSport"]
+        let subNonprofits = ["Humanitarian"]
+        let subFun = ["Trending", "Amazing", "Cute", "Haha", "Weird", "Holidays", "Animals", "Memes", "Humor"]
+        let subScience = ["Science News", "Space News"]
+        let subTechnology = ["Technology Professionals & Reporters", "Teach News"]
+        
+        let subTopics = [subNews, subLifestyle, subEntertainment, subFun, subMusic,
+                         subTechnology, subGovernment, subScience, subArts, subNonprofits, subSport, subGame]
+        
+        for index in 0..<titles.count {
+            let title = titles[index]
+            let tag = subTopics[index]
+            let topic = Topic(title: title, tags: tag)
             topics.append(topic)
         }
         
@@ -75,7 +92,7 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
                 guard let `self` = self else { return }
                 self.topics[index].showFull = true
                 self.tbView.reloadRows(at: [IndexPath(row: 0, section: index)], with: .none)
-        })
+            })
             .disposed(by: cell.disposeBag)
         return cell
     }

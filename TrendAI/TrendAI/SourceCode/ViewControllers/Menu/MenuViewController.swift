@@ -23,7 +23,7 @@ class MenuViewController: UIViewController {
     
     let bag = DisposeBag()
     
-    var menus = ["Trends", "Go Premium", "Trend Topics"]
+    var menus = ["Trends", "Go Premium"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
