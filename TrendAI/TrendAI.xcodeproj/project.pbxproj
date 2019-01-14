@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1F26FF11E4F88EB6D35F4BCB /* Pods_TrendAI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A1943BE8E61B9A73A9BF1B /* Pods_TrendAI.framework */; };
+		2E334C0B21EC846000AEC8E6 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E334C0A21EC846000AEC8E6 /* FirebaseService.swift */; };
+		2E334C0D21EC84E900AEC8E6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E334C0C21EC84E900AEC8E6 /* UserModel.swift */; };
 		2E60182621E740DB00BA2009 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60181521E740D400BA2009 /* UIDevice+Extension.swift */; };
 		2E60182721E740DB00BA2009 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60181621E740D400BA2009 /* Array+Extension.swift */; };
 		2E60182821E740DB00BA2009 /* RawRepresentable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60181721E740D400BA2009 /* RawRepresentable+Extension.swift */; };
@@ -102,6 +104,8 @@
 
 /* Begin PBXFileReference section */
 		17A34678139E00F29E7377B6 /* Pods-TrendAI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendAI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrendAI/Pods-TrendAI.debug.xcconfig"; sourceTree = "<group>"; };
+		2E334C0A21EC846000AEC8E6 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		2E334C0C21EC84E900AEC8E6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		2E60181521E740D400BA2009 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		2E60181621E740D400BA2009 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		2E60181721E740D400BA2009 /* RawRepresentable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RawRepresentable+Extension.swift"; sourceTree = "<group>"; };
@@ -233,6 +237,7 @@
 				2E60184721E7415C00BA2009 /* API.swift */,
 				2E60184521E7415C00BA2009 /* BaseService.swift */,
 				2E60184621E7415C00BA2009 /* Constants.swift */,
+				2E334C0A21EC846000AEC8E6 /* FirebaseService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 				84883DDA21AC1719004F122C /* Trend */,
 				84883DE921AC1719004F122C /* Response.swift */,
 				84883DEE21AC1719004F122C /* eNum.swift */,
+				2E334C0C21EC84E900AEC8E6 /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -756,6 +762,7 @@
 				"${BUILT_PRODUCTS_DIR}/TTGTagCollectionView/TTGTagCollectionView.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -777,6 +784,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTGTagCollectionView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -840,6 +848,7 @@
 				84883E1021AC172D004F122C /* JsonSample.swift in Sources */,
 				84883DF321AC1719004F122C /* UIImage+Rx.swift in Sources */,
 				962B353A219206B7007C503E /* LocTrendingVC.swift in Sources */,
+				2E334C0D21EC84E900AEC8E6 /* UserModel.swift in Sources */,
 				2E60184121E7411A00BA2009 /* RxImagePickerControllerDelegateProxy.swift in Sources */,
 				962B353F219206B7007C503E /* InputViewController.swift in Sources */,
 				962B3536219206B7007C503E /* TwitterAPI.swift in Sources */,
@@ -851,6 +860,7 @@
 				2E60185921E7480E00BA2009 /* BaseViewModel.swift in Sources */,
 				2E60182921E740DB00BA2009 /* UICollectionView+Extension.swift in Sources */,
 				2E60183121E740DB00BA2009 /* UIImagePickerController+RxSwift.swift in Sources */,
+				2E334C0B21EC846000AEC8E6 /* FirebaseService.swift in Sources */,
 				2E60184921E7415C00BA2009 /* Constants.swift in Sources */,
 				2E60183021E740DB00BA2009 /* TimeInterval+Extension.swift in Sources */,
 				2E60184021E7411A00BA2009 /* Error.swift in Sources */,
