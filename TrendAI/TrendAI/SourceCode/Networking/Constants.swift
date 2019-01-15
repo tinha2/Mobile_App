@@ -23,6 +23,7 @@ struct Constants {
     }
     
     struct UserDefaultsKey {
-        static let AccessToken = "AccessToken"
+        static let accessToken = "AccessToken"
+        static let userInformation = "UserInformation"
     }
 }

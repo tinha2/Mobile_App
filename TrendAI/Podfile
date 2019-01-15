@@ -6,7 +6,7 @@ target 'TrendAI' do
   use_frameworks!
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-  
+  pod 'Firebase/Database'
   pod 'OAuthSwift', '~> 1.2.0'
   
   # Pods for TrendAI
