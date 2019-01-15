@@ -24,6 +24,7 @@ enum TabComponents: Int {
     case Performances
     case Technologies
     case Payment
+    case Topics
 }
 
 let shouldOpenTabComponent = PublishSubject<TabComponents>()

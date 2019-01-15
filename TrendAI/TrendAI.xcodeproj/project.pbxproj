@@ -43,6 +43,10 @@
 		2E60185A21E7480E00BA2009 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60185821E7480E00BA2009 /* BaseViewController.swift */; };
 		2E60185F21E7483700BA2009 /* ViewWithXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60185C21E7483600BA2009 /* ViewWithXib.swift */; };
 		2E60186021E7483700BA2009 /* IndicatorCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60185E21E7483600BA2009 /* IndicatorCustomView.swift */; };
+		2E80F35721E8344D002D459B /* TopicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E80F35321E8344C002D459B /* TopicViewController.xib */; };
+		2E80F35821E8344D002D459B /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80F35421E8344C002D459B /* TopicViewController.swift */; };
+		2E80F35921E8344D002D459B /* TopicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E80F35521E8344D002D459B /* TopicTableViewCell.xib */; };
+		2E80F35A21E8344D002D459B /* TopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80F35621E8344D002D459B /* TopicTableViewCell.swift */; };
 		846F633921AD3664007BCACF /* LoginByTwitter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846F633721AD3664007BCACF /* LoginByTwitter.xib */; };
 		846F633A21AD3664007BCACF /* LoginByTwitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F633821AD3664007BCACF /* LoginByTwitterView.swift */; };
 		846F633F21AD5EBF007BCACF /* SocialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F633E21AD5EBF007BCACF /* SocialManager.swift */; };
@@ -133,6 +137,10 @@
 		2E60185821E7480E00BA2009 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2E60185C21E7483600BA2009 /* ViewWithXib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewWithXib.swift; sourceTree = "<group>"; };
 		2E60185E21E7483600BA2009 /* IndicatorCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorCustomView.swift; sourceTree = "<group>"; };
+		2E80F35321E8344C002D459B /* TopicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicViewController.xib; sourceTree = "<group>"; };
+		2E80F35421E8344C002D459B /* TopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
+		2E80F35521E8344D002D459B /* TopicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicTableViewCell.xib; sourceTree = "<group>"; };
+		2E80F35621E8344D002D459B /* TopicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicTableViewCell.swift; sourceTree = "<group>"; };
 		33A1943BE8E61B9A73A9BF1B /* Pods_TrendAI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrendAI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44348018D665E302307A0EA1 /* Pods-TrendAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendAI.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrendAI/Pods-TrendAI.release.xcconfig"; sourceTree = "<group>"; };
 		846F633721AD3664007BCACF /* LoginByTwitter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginByTwitter.xib; sourceTree = "<group>"; };
@@ -232,6 +240,7 @@
 		2E60184B21E741F800BA2009 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				2E80F35221E83438002D459B /* Topics */,
 				2E60184C21E7420200BA2009 /* Payment */,
 			);
 			path = Screens;
@@ -261,6 +270,17 @@
 				2E60185E21E7483600BA2009 /* IndicatorCustomView.swift */,
 			);
 			path = Indicator;
+			sourceTree = "<group>";
+		};
+		2E80F35221E83438002D459B /* Topics */ = {
+			isa = PBXGroup;
+			children = (
+				2E80F35621E8344D002D459B /* TopicTableViewCell.swift */,
+				2E80F35521E8344D002D459B /* TopicTableViewCell.xib */,
+				2E80F35421E8344C002D459B /* TopicViewController.swift */,
+				2E80F35321E8344C002D459B /* TopicViewController.xib */,
+			);
+			path = Topics;
 			sourceTree = "<group>";
 		};
 		696918797FD485D4F54B4F98 /* Pods */ = {
@@ -659,11 +679,13 @@
 				962B3517219206B7007C503E /* Menu.storyboard in Resources */,
 				969999E72190A71900E39B37 /* LaunchScreen.storyboard in Resources */,
 				962B3519219206B7007C503E /* Login.storyboard in Resources */,
+				2E80F35721E8344D002D459B /* TopicViewController.xib in Resources */,
 				969999F02190B7A700E39B37 /* GoogleService-Info.plist in Resources */,
 				962B351A219206B7007C503E /* Tabbar.storyboard in Resources */,
 				2E60185621E746CD00BA2009 /* PaymentViewController.xib in Resources */,
 				2E60185021E7458C00BA2009 /* MenuTableViewCell.xib in Resources */,
 				84883E0E21AC172D004F122C /* deepsocial-key.json in Resources */,
+				2E80F35921E8344D002D459B /* TopicTableViewCell.xib in Resources */,
 				962B3518219206B7007C503E /* Main.storyboard in Resources */,
 				962B3547219206B7007C503E /* LoadingView.xib in Resources */,
 				846F633921AD3664007BCACF /* LoginByTwitter.xib in Resources */,
@@ -789,12 +811,14 @@
 				2E60185521E746CD00BA2009 /* PaymentViewModel.swift in Sources */,
 				2E60182B21E740DB00BA2009 /* UIViewController+Extension.swift in Sources */,
 				2E60183621E740DB00BA2009 /* NSObject+Extension.swift in Sources */,
+				2E80F35A21E8344D002D459B /* TopicTableViewCell.swift in Sources */,
 				846F634121AD603F007BCACF /* SessionManager.swift in Sources */,
 				962B3515219206B7007C503E /* APICoordinator.swift in Sources */,
 				2E60182621E740DB00BA2009 /* UIDevice+Extension.swift in Sources */,
 				84883DF721AC1719004F122C /* TWLocation.swift in Sources */,
 				967C02802199C036002B4126 /* Ex+FIRUser.swift in Sources */,
 				84883DF621AC1719004F122C /* TWTrend.swift in Sources */,
+				2E80F35821E8344D002D459B /* TopicViewController.swift in Sources */,
 				2E60185A21E7480E00BA2009 /* BaseViewController.swift in Sources */,
 				962B3546219206B7007C503E /* TabButton.swift in Sources */,
 				2E60184321E7411A00BA2009 /* ErrorTracker.swift in Sources */,

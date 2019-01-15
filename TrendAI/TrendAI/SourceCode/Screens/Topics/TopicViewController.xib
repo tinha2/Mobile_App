@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopicViewController" customModule="TrendsAI" customModuleProvider="target">
+            <connections>
+                <outlet property="tbView" destination="gy6-Jp-MSV" id="Qfp-XC-TD8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are you interested in?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUq-NQ-5jN">
+                    <rect key="frame" x="20" y="60" width="223.5" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select some topics you're insterested in to help personalize your Twitter experience, starting with finding people to follow" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyR-Uy-pZN">
+                    <rect key="frame" x="20" y="91" width="335" height="50.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="wct-Q6-ZKh">
+                    <rect key="frame" x="0.0" y="151.5" width="375" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gy6-Jp-MSV">
+                    <rect key="frame" x="0.0" y="207.5" width="375" height="459.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wct-Q6-ZKh" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="57W-VD-JOI"/>
+                <constraint firstItem="wct-Q6-ZKh" firstAttribute="top" secondItem="YyR-Uy-pZN" secondAttribute="bottom" constant="10" id="6ZH-l0-hbj"/>
+                <constraint firstItem="gy6-Jp-MSV" firstAttribute="top" secondItem="wct-Q6-ZKh" secondAttribute="bottom" id="7VS-Qd-5GW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gy6-Jp-MSV" secondAttribute="trailing" id="H3K-mB-aHs"/>
+                <constraint firstItem="YyR-Uy-pZN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Jfo-Jk-Nhm"/>
+                <constraint firstItem="YyR-Uy-pZN" firstAttribute="leading" secondItem="XUq-NQ-5jN" secondAttribute="leading" id="Pkt-3o-Gux"/>
+                <constraint firstItem="wct-Q6-ZKh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="c1C-ZJ-3HF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gy6-Jp-MSV" secondAttribute="bottom" id="cta-KH-C51"/>
+                <constraint firstItem="YyR-Uy-pZN" firstAttribute="top" secondItem="XUq-NQ-5jN" secondAttribute="bottom" constant="10" id="eOI-l8-MX6"/>
+                <constraint firstItem="gy6-Jp-MSV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hfu-kU-RO8"/>
+                <constraint firstItem="XUq-NQ-5jN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="iMm-FE-qdQ"/>
+                <constraint firstItem="XUq-NQ-5jN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="uWC-aa-I6G"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

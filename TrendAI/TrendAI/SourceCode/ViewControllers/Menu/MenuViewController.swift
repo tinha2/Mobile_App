@@ -23,7 +23,7 @@ class MenuViewController: UIViewController {
     
     let bag = DisposeBag()
     
-    var menus = ["Trends", "Go Premium", "Trend Topics"]
+    var menus = ["Trends", "Go Premium"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -179,6 +179,8 @@ extension MenuViewController:UITableViewDelegate {
             shouldOpenTabComponent.onNext(.Trends)
         case 1:
             shouldOpenTabComponent.onNext(.Payment)
+        case 2:
+            shouldOpenTabComponent.onNext(.Topics)
         default:
             break
         }
