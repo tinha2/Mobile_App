@@ -1,2 +1,1 @@
-# Mobile_App
-Mobile app development
+# Mobile app development project
