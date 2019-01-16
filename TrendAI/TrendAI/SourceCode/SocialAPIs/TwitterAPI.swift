@@ -49,8 +49,12 @@ class TwitterAPI {
                 if error != nil {
                     observer.onError(error!)
                 } else {
-                    observer.onNext(Response.raw(data!))
-                    observer.onCompleted()
+                    if let rData = data {
+                        observer.onNext(Response.raw(rData))
+                        observer.onCompleted()
+                    } else {
+                        observer.onError(TwitterError.noData)
+                    }
                 }
             }
             
